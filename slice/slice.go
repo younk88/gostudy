@@ -26,6 +26,10 @@ func change_arr_ptr(s *[2]int) {
 	s[0] = 0
 }
 
+func append_element(s *[]int) {
+	*s = append(*s, 1)
+}
+
 func main()  {
 	data := []int {1,3,5,7,9,11,13}
 	print_slice_info(data)
@@ -103,4 +107,9 @@ func main()  {
 	print_slice_info(ns)
 	ns = append(ns, 2)
 	print_slice_info(ns)
+
+	as := []int{}
+	append_element(&as)
+	append_element(&as)
+	print_slice_info(as)
 }
