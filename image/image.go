@@ -4,6 +4,10 @@ import (
 	"fmt"
 	"image"
 	"image/color"
+	"os"
+	"path/filepath"
+
+	"github.com/disintegration/imageorient"
 	"golang.org/x/tour/pic"
 )
 
@@ -32,4 +36,10 @@ func main() {
 	m := Image{88, 44, 22}
 	fmt.Println(m)
 	pic.ShowImage(m)
+
+	fName := os.Args[1]
+	f, _ := os.Open(fName)
+	info, s, err := imageorient.DecodeConfig(f)
+	fmt.Printf("info: %v, format: %v, err:%v\n", info, s, err)
+	fmt.Println(filepath.Ext(fName))
 }
