@@ -1,0 +1,10 @@
+# github.com/abema/go-mp4 v0.6.0
+## explicit
+github.com/abema/go-mp4
+github.com/abema/go-mp4/bitio
+github.com/abema/go-mp4/util
+# github.com/google/uuid v1.1.2
+github.com/google/uuid
+# github.com/sunfish-shogi/bufseekio v0.0.0-20210207115823-a4185644b365
+## explicit
+github.com/sunfish-shogi/bufseekio
